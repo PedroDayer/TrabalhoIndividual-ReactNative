@@ -11,7 +11,7 @@ export const Botao = ({placeHolder, iconeNome}: BotaoProps) => {
   return(
     <View>
       <TouchableOpacity style={styles.botao}>
-        <FontAwesome name={iconeNome} size={20} />
+        <FontAwesome name={iconeNome} size={20} color="#4285F4" />
         <Text style={styles.textoPlaceHolder}>{placeHolder}</Text>
       </TouchableOpacity>
     </View>

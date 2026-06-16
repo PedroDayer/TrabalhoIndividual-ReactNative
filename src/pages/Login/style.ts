@@ -3,13 +3,21 @@ import { StyleSheet } from "react-native";
 export const styles = StyleSheet.create({
   title: {
     color: "#FBFBFB",
-    fontSize: 20,
+    fontSize: 25,
+    marginTop: 10,
+    marginBottom: 30,
   },
-  container: {
-    // #101110
-    backgroundColor: "red",
+  containerPai: {
+    backgroundColor: "#101110",
     height: "100%",
     alignItems: "center",
-    paddingTop: 80,
+    paddingTop: 90,
+  },
+
+  esqueceu: {
+    color: "#a7a7a7",
+  },
+  cadastro: {
+    color: "#a7a7a7",
   },
 });
