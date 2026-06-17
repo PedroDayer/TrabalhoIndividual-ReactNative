@@ -30,7 +30,7 @@ export const styles = StyleSheet.create({
   containerPai: {
     // testar
     flex: 1,
-    backgroundColor: "#101110",
+    backgroundColor: "#101010",
     alignItems: "center",
     justifyContent: "center",
     height: "100%",

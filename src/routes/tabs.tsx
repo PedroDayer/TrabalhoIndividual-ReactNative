@@ -17,7 +17,14 @@ export const TabsRouters = () => {
     <Tabs.Navigator
       screenOptions={{
         headerShown: false,
-        tabBarStyle: { backgroundColor: "red", height: 80 },
+        tabBarStyle: {
+          backgroundColor: "rgba(0, 0, 0, 0.9)",
+          height: 90,
+          elevation: 0,
+          borderTopWidth: 0,
+          position: "absolute",
+        },
+        tabBarShowLabel: true,
       }}
     >
       <Tabs.Screen
@@ -27,7 +34,7 @@ export const TabsRouters = () => {
           title: "",
           tabBarIcon: ({ focused }) => (
             <View style={styles.cardTabs}>
-              <Icon name="home" size={30} color={focused ? "#FDFCFE" : ""} />
+              <Icon name="home-outline" size={30} color={focused ? "#FDFCFE" : "#A4A3A3"} />
               <Text
                 style={[
                   styles.textTabs,
@@ -47,7 +54,7 @@ export const TabsRouters = () => {
           title: "",
           tabBarIcon: ({ focused }) => (
             <View style={styles.cardTabs}>
-              <Icon name="search" size={30} color={focused ? "#FDFCFE" : ""} />
+              <Icon name="search-outline" size={30} color={focused ? "#FDFCFE" : "#A4A3A3"} />
               <Text
                 style={[
                   styles.textTabs,
@@ -68,7 +75,7 @@ export const TabsRouters = () => {
           title: "",
           tabBarIcon: ({ focused }) => (
             <View style={styles.cardTabs}>
-              <Icon name="library" size={30} color={focused ? "#FDFCFE" : ""} />
+              <Icon name="library-outline" size={30} color={focused ? "#FDFCFE" : "#A4A3A3"} />
               <Text
                 style={[
                   styles.textTabs,
@@ -92,7 +99,7 @@ export const TabsRouters = () => {
               <FontAwesome
                 name="spotify"
                 size={30}
-                color={focused ? "#FDFCFE" : ""}
+                color={focused ? "#FDFCFE" : "#A4A3A3"}
               />
               <Text
                 style={[

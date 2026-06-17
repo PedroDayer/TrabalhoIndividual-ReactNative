@@ -4,8 +4,7 @@ export const styles = StyleSheet.create({
   title: {},
   containerPai: {
     flex: 1,
-    // backgroundColor: "#101110",
-    backgroundColor: "pink",
+    backgroundColor: "#101010",
   },
 
   header: {
@@ -14,7 +13,7 @@ export const styles = StyleSheet.create({
     alignItems: "center",
     paddingHorizontal: "5%",
     // ver sobre essa porcentagem depois
-    marginTop: "15%",
+    marginTop: "18%",
   },
 
   headerPerfil: {
@@ -62,10 +61,29 @@ export const styles = StyleSheet.create({
 
   playList: {
     paddingHorizontal: "5%",
-    marginVertical: 20,
+    marginTop: 20,
   },
 
   linha: {
     justifyContent: "space-between",
+  },
+
+  recomendados: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    paddingHorizontal: "5%",
+    marginBottom: 8,
+    marginTop: 30,
+  },
+
+  tituloRecomendados: {
+    fontSize: 20,
+    fontWeight: "bold",
+    color: "#F5F6F5",
+  },
+
+  feitoParaVoce: {
+    paddingLeft: "5%",
   },
 });

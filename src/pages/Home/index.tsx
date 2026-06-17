@@ -1,14 +1,28 @@
-import { FlatList, Image, Text, TouchableOpacity, View } from "react-native";
+import {
+  FlatList,
+  Image,
+  ScrollView,
+  Text,
+  TouchableOpacity,
+  View,
+} from "react-native";
 import { styles } from "./style";
 import fotoPerfil from "../../assets/fotoPerfil.jpg";
 import { FontAwesome } from "@expo/vector-icons";
 import { BotaoFiltro } from "../../components/BotaoFiltro";
 import { dadosPlayList } from "../../data/dadosPlayList";
 import { CardPlaylist } from "../../components/CardPlayList";
+import { BotaoVerMais } from "../../components/BotaoVerMais";
+import { dadosRadarList } from "../../data/dadosRadarList";
+import { CardFeitoParaVoce } from "../../components/CardFeitoParaVoce";
+import { dadosListRecentemente } from "../../data/dadosListRecentemente";
 
 export const Home = () => {
   return (
-    <View style={styles.containerPai}>
+    <ScrollView
+      style={styles.containerPai}
+      showsVerticalScrollIndicator={false}
+    >
       <View style={styles.header}>
         <View style={styles.headerPerfil}>
           <TouchableOpacity style={styles.botaoPerfilIcone}>
@@ -49,10 +63,55 @@ export const Home = () => {
           renderItem={({ item }) => (
             <CardPlaylist titulo={item.titulo} imagem={item.imagem} />
           )}
-          numColumns={2} 
-          columnWrapperStyle={styles.linha} 
+          numColumns={2}
+          columnWrapperStyle={styles.linha}
+          scrollEnabled={false}
         />
       </View>
-    </View>
+
+      <View style={styles.recomendados}>
+        <Text style={styles.tituloRecomendados}>Feita para você</Text>
+        <BotaoVerMais placeHolder="Ver tudo" />
+      </View>
+
+      <View style={styles.feitoParaVoce}>
+        <FlatList
+          horizontal={true}
+          showsHorizontalScrollIndicator={false}
+          data={dadosRadarList}
+          keyExtractor={(item) => String(item.id)}
+          renderItem={({ item }) => (
+            <CardFeitoParaVoce
+              imagem={item.imagem}
+              titulo={item.titulo}
+              subtitulo={item.subtitulo}
+            />
+          )}
+        />
+      </View>
+
+      <View style={styles.recomendados}>
+        <Text style={styles.tituloRecomendados}>Tocadas recentemente</Text>
+        <BotaoVerMais placeHolder="Ver tudo" />
+      </View>
+
+      <View style={styles.feitoParaVoce}>
+        <FlatList
+          horizontal={true}
+          showsHorizontalScrollIndicator={false}
+          data={dadosListRecentemente}
+          keyExtractor={(item) => String(item.id)}
+          renderItem={({ item }) => (
+            <CardFeitoParaVoce
+              imagem={item.imagem}
+              titulo={item.titulo}
+              subtitulo={item.subtitulo}
+            />
+          )}
+        />
+      </View>
+
+      <View style={{ height: 120 }} />
+    </ScrollView>
   );
 };

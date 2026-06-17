@@ -1,18 +1,18 @@
 import { Text, TouchableOpacity, View, ViewStyle } from "react-native";
 import { styles } from "./style";
 
-interface PropsBotaoFiltro {
+interface PropsBotaoVerMais {
   placeHolder: string;
   botaoStyleAdd?: ViewStyle;
 }
 
-export const BotaoFiltro = ({
+export const BotaoVerMais = ({
   placeHolder,
   botaoStyleAdd,
-}: PropsBotaoFiltro) => {
+}: PropsBotaoVerMais) => {
   return (
     <View>
-      <TouchableOpacity style={[styles.botaoFiltro, botaoStyleAdd]}>
+      <TouchableOpacity style={[styles.botaoVerMais, botaoStyleAdd]}>
         <Text style={styles.placeHolder}>{placeHolder}</Text>
       </TouchableOpacity>
     </View>
