@@ -9,7 +9,6 @@ import {
   ViewStyle,
 } from "react-native";
 import { styles } from "./style";
-import { FontAwesome } from "@expo/vector-icons";
 
 interface BotaoProps {
   placeHolder: string;

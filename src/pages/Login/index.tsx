@@ -1,7 +1,6 @@
-import { Image, Text, View } from "react-native";
+import { Text, View } from "react-native";
 import { styles } from "./style";
 import { Botao } from "../../components/Botao";
-import ImagemLogo from "../../assets/ImagemLogo.png";
 import { FontAwesome } from "@expo/vector-icons";
 import { InputCampo } from "../../components/Input";
 import { BotaoCadastro } from "../../components/BotaoCadastro";

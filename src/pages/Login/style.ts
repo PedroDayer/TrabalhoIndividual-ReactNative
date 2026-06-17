@@ -28,15 +28,13 @@ export const styles = StyleSheet.create({
   },
 
   containerPai: {
-    // testar
     flex: 1,
     backgroundColor: "#101010",
     alignItems: "center",
     justifyContent: "center",
     height: "100%",
     width: "100%",
-    // Para mexer todo o conteudo da pagina Login
-    paddingBottom: 15,
+    paddingBottom: "2%",
   },
 
   esqueceu: {

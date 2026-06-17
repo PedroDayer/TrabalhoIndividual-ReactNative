@@ -1,4 +1,9 @@
-import { View, Image, Text, StyleSheet, ImageSourcePropType } from "react-native";
+import {
+  Image,
+  Text,
+  ImageSourcePropType,
+  TouchableOpacity,
+} from "react-native";
 import { styles } from "./style";
 
 interface PropsCardPlayList {
@@ -7,10 +12,10 @@ interface PropsCardPlayList {
 }
 
 export const CardPlaylist = ({ titulo, imagem }: PropsCardPlayList) => (
-  <View style={styles.card}>
+  <TouchableOpacity style={styles.card}>
     <Image source={imagem} style={styles.capa} />
     <Text style={styles.titulo} numberOfLines={2}>
       {titulo}
     </Text>
-  </View>
+  </TouchableOpacity>
 );

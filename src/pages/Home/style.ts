@@ -12,7 +12,6 @@ export const styles = StyleSheet.create({
     justifyContent: "space-between",
     alignItems: "center",
     paddingHorizontal: "5%",
-    // ver sobre essa porcentagem depois
     marginTop: "18%",
   },
 
@@ -34,6 +33,7 @@ export const styles = StyleSheet.create({
     height: 40,
     borderRadius: 20,
     overflow: "hidden",
+    backgroundColor: '#1B1B1A',
   },
 
   fotoPerfil: {
@@ -49,8 +49,6 @@ export const styles = StyleSheet.create({
     textAlign: "center",
   },
   containerFiltro: {
-    // flex: 1,
-    // backgroundColor: "#101110",
     flexDirection: "row",
     alignItems: "center",
     marginTop: 20,

@@ -1,9 +1,8 @@
 import {
-  View,
   Image,
   Text,
-  StyleSheet,
   ImageSourcePropType,
+  TouchableOpacity,
 } from "react-native";
 import { styles } from "./style";
 
@@ -18,7 +17,7 @@ export const CardFeitoParaVoce = ({
   imagem,
   subtitulo,
 }: PropsCardFeitoParaVoce) => (
-  <View style={styles.card}>
+  <TouchableOpacity style={styles.card}>
     <Image source={imagem} style={styles.capa} />
     <Text style={styles.titulo} numberOfLines={1}>
       {titulo}
@@ -26,5 +25,5 @@ export const CardFeitoParaVoce = ({
     <Text style={styles.subtitulo} numberOfLines={2}>
       {subtitulo}
     </Text>
-  </View>
+  </TouchableOpacity>
 );

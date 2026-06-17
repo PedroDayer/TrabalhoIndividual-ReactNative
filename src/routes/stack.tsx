@@ -1,6 +1,5 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { Login } from '../pages/Login';
-import { Home } from '../pages/Home';
 import { TabsRouters } from './tabs';
 import { ParametrosRotasStack } from './navigation';
 

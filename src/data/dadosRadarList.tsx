@@ -21,7 +21,7 @@ export const dadosRadarList = [
     id: 3,
     imagem: capaRadar5,
     titulo: "Brainstorm",
-    subtitulo: "Álbum do artista Jason",
+    subtitulo: "Música mais escutada do momento",
   },
   {
     id: 4,

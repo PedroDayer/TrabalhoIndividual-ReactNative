@@ -25,25 +25,38 @@ export const Home = () => {
     >
       <View style={styles.header}>
         <View style={styles.headerPerfil}>
-          <TouchableOpacity style={styles.botaoPerfilIcone}>
+          <TouchableOpacity
+            style={[
+              styles.botaoPerfilIcone,
+              !fotoPerfil && { justifyContent: "center", alignItems: "center" },
+            ]}
+          >
             <View>
-              <Image
-                source={fotoPerfil}
-                alt="Foto de perfil do usuário"
-                style={styles.fotoPerfil}
-              />
+              {fotoPerfil ? (
+                <Image
+                  source={fotoPerfil}
+                  alt="Foto de perfil do usuário"
+                  style={styles.fotoPerfil}
+                />
+              ) : (
+                <FontAwesome name="user" size={24} color="white" />
+              )}
             </View>
           </TouchableOpacity>
           <Text style={styles.titulo}>Boa noite</Text>
         </View>
         <View style={styles.headerIcones}>
-          <FontAwesome
-            name="bell-o"
-            size={24}
-            color="white"
-            style={styles.icon}
-          />
-          <FontAwesome name="history" size={24} color="white" />
+          <TouchableOpacity>
+            <FontAwesome
+              name="bell-o"
+              size={24}
+              color="white"
+              style={styles.icon}
+            />
+          </TouchableOpacity>
+          <TouchableOpacity>
+            <FontAwesome name="history" size={24} color="white" />
+          </TouchableOpacity>
         </View>
       </View>
 
