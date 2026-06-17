@@ -8,7 +8,7 @@ interface PropsInputCampo {
 
 export const InputCampo = ({ textoInput, placeHolder }: PropsInputCampo) => {
   return (
-    <View style={styles.container}>
+    <View style={styles.containerInput}>
       <Text style={styles.textoLabel}>{textoInput}</Text>
       <TextInput
         style={styles.textoInput}
