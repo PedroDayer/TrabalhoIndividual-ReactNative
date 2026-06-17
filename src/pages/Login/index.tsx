@@ -8,8 +8,11 @@ import { BotaoCadastro } from "../../components/BotaoCadastro";
 import googleLogo from "../../assets/search.png";
 import facebookLogo from "../../assets/facebook.png";
 import appleLogo from "../../assets/apple.png";
+import { useNavigation } from "@react-navigation/native";
 
 export const Login = () => {
+  const navigate = useNavigation();
+
   return (
     <View style={styles.containerPai}>
       <FontAwesome name="spotify" size={60} color="white" />
@@ -36,6 +39,7 @@ export const Login = () => {
 
       <View style={styles.containerLogIn}>
         <Botao
+          onChange={() => navigate.navigate('StackHome')}
           placeHolder="Log in"
           botaoStyleAdd={{
             backgroundColor: "#1ED15B",

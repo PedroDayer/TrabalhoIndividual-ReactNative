@@ -17,6 +17,7 @@ interface BotaoProps {
   botaoStyleAdd?: ViewStyle;
   textoStyleAdd?: TextStyle;
   imagemStyleAdd?: ImageStyle;
+  onChange?: () => void;
 }
 
 export const Botao = ({
@@ -25,10 +26,11 @@ export const Botao = ({
   botaoStyleAdd,
   textoStyleAdd,
   imagemStyleAdd,
+  onChange,
 }: BotaoProps) => {
   return (
     <View style={styles.containerBotao}>
-      <TouchableOpacity style={[styles.botao, botaoStyleAdd]}>
+      <TouchableOpacity style={[styles.botao, botaoStyleAdd]} onPress={onChange}>
         <View style={styles.containerIconeImagem}>
           {source && (
             <Image
