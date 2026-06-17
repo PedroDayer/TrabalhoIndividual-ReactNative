@@ -1,4 +1,7 @@
 import {
+  Image,
+  ImageSourcePropType,
+  ImageStyle,
   Text,
   TextStyle,
   TouchableOpacity,
@@ -10,21 +13,30 @@ import { FontAwesome } from "@expo/vector-icons";
 
 interface BotaoProps {
   placeHolder: string;
-  iconeNome?: React.ComponentProps<typeof FontAwesome>["name"];
+  source?: ImageSourcePropType;
   botaoStyleAdd?: ViewStyle;
   textoStyleAdd?: TextStyle;
+  imagemStyleAdd?: ImageStyle;
 }
 
 export const Botao = ({
   placeHolder,
-  iconeNome,
+  source,
   botaoStyleAdd,
   textoStyleAdd,
+  imagemStyleAdd,
 }: BotaoProps) => {
   return (
     <View style={styles.containerBotao}>
       <TouchableOpacity style={[styles.botao, botaoStyleAdd]}>
-        <FontAwesome name={iconeNome} size={20} color="#4285F4" />
+        <View style={styles.containerIconeImagem}>
+          {source && (
+            <Image
+              source={source}
+              style={[styles.iconeImagem, imagemStyleAdd]}
+            />
+          )}
+        </View>
         <Text style={[styles.textoPlaceHolder, textoStyleAdd]}>
           {placeHolder}
         </Text>

@@ -45,6 +45,7 @@ export const styles = StyleSheet.create({
   },
   cadastro: {
     color: "#a7a7a7",
+    marginRight: 5,
   },
 
   linhaDivisoria: {

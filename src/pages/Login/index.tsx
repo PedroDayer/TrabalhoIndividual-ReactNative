@@ -5,6 +5,9 @@ import ImagemLogo from "../../assets/ImagemLogo.png";
 import { FontAwesome } from "@expo/vector-icons";
 import { InputCampo } from "../../components/Input";
 import { BotaoCadastro } from "../../components/BotaoCadastro";
+import googleLogo from "../../assets/search.png";
+import facebookLogo from "../../assets/facebook.png";
+import appleLogo from "../../assets/apple.png";
 
 export const Login = () => {
   return (
@@ -12,9 +15,13 @@ export const Login = () => {
       <FontAwesome name="spotify" size={60} color="white" />
       <Text style={styles.title}>Log in to Spotify</Text>
       <View style={styles.containerContinue}>
-        <Botao placeHolder="Continue with Google" iconeNome="google" />
-        <Botao placeHolder="Continue with Facebook" />
-        <Botao placeHolder="Continue with Apple" />
+        <Botao placeHolder="Continue with Google" source={googleLogo} />
+        <Botao placeHolder="Continue with Facebook" source={facebookLogo} />
+        <Botao
+          placeHolder="Continue with Apple"
+          source={appleLogo}
+          imagemStyleAdd={{ width: 40, height: 40 }}
+        />
       </View>
 
       <View style={styles.linhaDivisoria}></View>
