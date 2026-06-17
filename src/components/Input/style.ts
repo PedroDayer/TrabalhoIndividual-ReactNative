@@ -12,15 +12,20 @@ export const styles = StyleSheet.create({
     fontWeight: "600",
     marginBottom: 8,
   },
-  textoInput: {
+  containerInputSenha: {
     width: "100%",
     height: 50,
+    flexDirection: "row",
+    alignItems: "center",
     borderWidth: 1,
     borderColor: "#444",
-    fontSize: 16,
+    borderRadius: 5,
     paddingHorizontal: 15,
     backgroundColor: "transparent",
-    borderRadius: 5,
+  },
+  textoInput: {
+    flex: 1,
+    fontSize: 16,
     color: "#FFFFFF",
   },
 });

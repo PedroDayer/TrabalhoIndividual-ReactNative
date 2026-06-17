@@ -33,7 +33,7 @@ export const Login = () => {
           textoInput="Email or username"
           placeHolder="Email or username"
         />
-        <InputCampo textoInput="Password" placeHolder="Password" />
+        <InputCampo textoInput="Password" placeHolder="Password" isPassword={true}/>
       </View>
 
       <View style={styles.containerLogIn}>
