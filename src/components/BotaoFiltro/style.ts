@@ -11,4 +11,11 @@ export const styles = StyleSheet.create({
     color: "#F5F6F6",
     fontWeight: 500,
   },
+
+  botaoAtivo: {
+    backgroundColor: "#24BD48",
+  },
+  botaoInativo: {
+    backgroundColor: "#1C1C1C",
+  },
 });

@@ -16,8 +16,10 @@ import { BotaoVerMais } from "../../components/BotaoVerMais";
 import { dadosRadarList } from "../../data/dadosRadarList";
 import { CardFeitoParaVoce } from "../../components/CardFeitoParaVoce";
 import { dadosListRecentemente } from "../../data/dadosListRecentemente";
+import { useState } from "react";
 
 export const Home = () => {
+  const [filtroAtivo, setFiltroAtivo] = useState("Tudo");
   return (
     <ScrollView
       style={styles.containerPai}
@@ -63,10 +65,19 @@ export const Home = () => {
       <View style={styles.containerFiltro}>
         <BotaoFiltro
           placeHolder="Tudo"
-          botaoStyleAdd={{ backgroundColor: "#24BD48" }}
+          estaAtivo={filtroAtivo === "Tudo"}
+          onChange={() => setFiltroAtivo("Tudo")}
         />
-        <BotaoFiltro placeHolder="Música" />
-        <BotaoFiltro placeHolder="Podcasts" />
+        <BotaoFiltro
+          placeHolder="Música"
+          estaAtivo={filtroAtivo === "Música"}
+          onChange={() => setFiltroAtivo("Música")}
+        />
+        <BotaoFiltro
+          placeHolder="Podcasts"
+          estaAtivo={filtroAtivo === "Podcasts"}
+          onChange={() => setFiltroAtivo("Podcasts")}
+        />
       </View>
 
       <View style={styles.playList}>
@@ -83,7 +94,7 @@ export const Home = () => {
       </View>
 
       <View style={styles.recomendados}>
-        <Text style={styles.tituloRecomendados}>Feita para você</Text>
+        <Text style={styles.tituloRecomendados}>Feito para você</Text>
         <BotaoVerMais placeHolder="Ver tudo" />
       </View>
 
@@ -104,7 +115,7 @@ export const Home = () => {
       </View>
 
       <View style={styles.recomendados}>
-        <Text style={styles.tituloRecomendados}>Tocadas recentemente</Text>
+        <Text style={styles.tituloRecomendados}>Tocados recentemente</Text>
         <BotaoVerMais placeHolder="Ver tudo" />
       </View>
 

@@ -14,7 +14,7 @@ export const Login = () => {
 
   return (
     <View style={styles.containerPai}>
-      <FontAwesome name="spotify" size={60} color="white" />
+      <FontAwesome name="spotify" size={55} color="white" />
       <Text style={styles.title}>Log in to Spotify</Text>
       <View style={styles.containerContinue}>
         <Botao placeHolder="Continue with Google" source={googleLogo} />
@@ -43,7 +43,7 @@ export const Login = () => {
           botaoStyleAdd={{
             backgroundColor: "#1ED15B",
             borderWidth: 0,
-            marginBottom: 30,
+            marginBottom: 25,
           }}
           textoStyleAdd={{ color: "#010602" }}
         />

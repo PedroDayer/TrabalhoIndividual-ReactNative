@@ -3,26 +3,26 @@ import { StyleSheet } from "react-native";
 export const styles = StyleSheet.create({
   title: {
     color: "#FBFBFB",
-    fontSize: 26,
+    fontSize: 24,
     marginTop: 10,
     marginBottom: 15,
     fontWeight: "bold",
     textAlign: "center",
   },
   containerContinue: {
-    width: "80%",
+    width: "75%",
     alignItems: "center",
     justifyContent: "center",
   },
 
   containerInput: {
-    width: "80%",
+    width: "75%",
     alignItems: "center",
     justifyContent: "center",
   },
 
   containerLogIn: {
-    width: "80%",
+    width: "75%",
     alignItems: "center",
     justifyContent: "center",
   },
@@ -37,11 +37,8 @@ export const styles = StyleSheet.create({
     paddingBottom: "2%",
   },
 
-  esqueceu: {
-    color: "#a7a7a7",
-    marginVertical: 20,
-  },
   cadastro: {
+    fontSize: 13,
     color: "#a7a7a7",
     marginRight: 5,
   },
@@ -58,6 +55,6 @@ export const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     flexDirection: "row",
-    marginTop: 30,
+    marginTop: 25,
   },
 });
